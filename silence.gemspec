@@ -23,15 +23,15 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.8"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "cucumber", "~> 2.0.0.rc.4"
-  spec.add_development_dependency "watir-webdriver", "~> 0.6.11"
-  spec.add_development_dependency "page-object", "~> 1.0.3"
-  spec.add_development_dependency "require_all", "~> 1.3.2"
-  spec.add_development_dependency "headless", "~> 1.0.2"
-  spec.add_development_dependency "faker", "~> 1.4.3"
-  spec.add_development_dependency "rspec", "~> 3.2.0"
-  spec.add_development_dependency "data_magic", "~> 0.20"
+  spec.add_development_dependency "bundler", "1.8"
+  spec.add_development_dependency "rake", "10.0"
+  spec.add_development_dependency "cucumber", "2.0.0.rc.4"
+  spec.add_development_dependency "watir-webdriver", "0.6.11"
+  spec.add_development_dependency "page-object", "1.0.3"
+  spec.add_development_dependency "require_all", "1.3.2"
+  spec.add_development_dependency "headless", "1.0.2"
+  spec.add_development_dependency "faker", "1.4.3"
+  spec.add_development_dependency "rspec", "3.2.0"
+  spec.add_development_dependency "data_magic", "0.20"
 
 end
