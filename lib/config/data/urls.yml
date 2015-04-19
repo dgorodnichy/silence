@@ -1,0 +1,6 @@
+dev:
+  default:
+    example_page: http://www.passport.wapstart.ru/registration/?lang=en
+    #example_page: http://eurail.ecodev.d7.acquia.adyax.com/
+  en:
+    example_page: http://google.ru

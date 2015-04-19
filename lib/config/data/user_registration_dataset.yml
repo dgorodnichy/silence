@@ -1,0 +1,10 @@
+registration_form:
+  email: ~email_address(name = 'test_user')
+  show_password: true
+  password: ~characters(character_count = 8)
+  know_about_us: From friend
+  first_last_name: ~full_name
+  telephone: ~phone_number
+  language: ~randomize ['English', 'Русский']
+  purpose_of_registration: Place the ads in WapStart ad network
+  accept: true

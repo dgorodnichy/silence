@@ -1,0 +1,16 @@
+# ENVIRONMENT is ...
+# BROWSER ...
+# BROWSER_PATH is ...
+# HEADLESS ... 
+# BROWSER_PROFILE_PATH ...
+
+#<% browser_profile_path = "BROWSER_PROFILE_PATH=/config/browser_profiles/profile.default" %>
+
+<% browser_profile_path = "" %> #"BROWSER_PROFILE_PATH=/config/browser_profile/7jrq1qjp.mufe" %>
+<% browser = "BROWSER=firefox" %>
+<% browser_path = "BROWSER_PATH=/opt/firefox_28/firefox" %>
+<% env = "ENVIRONMENT=dev" %>
+<% hdls = "HEADLESS=true" %>
+<% format = "--format SilenceHtml --out reports/report.html --format pretty" %>
+
+default: <%= "#{env} #{browser} #{browser_profile_path} #{hdls} #{browser_path} #{format}" %> --backtrace 
