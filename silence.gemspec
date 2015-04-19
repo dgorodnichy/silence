@@ -35,6 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "faker", "1.4.3"
   spec.add_development_dependency "rspec", "3.2.0"
   spec.add_development_dependency "data_magic", "0.20"
-  spec.add_development_dependency "thor", "~> 0.19.1"
+  spec.add_development_dependency "thor", "0.19.1"
 
 end
