@@ -1,7 +1,5 @@
 require "silence/version"
+require "silence/cli"
 
 module Silence
-
-  Silence::Cli::Application.start(ARGV)
-  # Your code goes here...
 end
