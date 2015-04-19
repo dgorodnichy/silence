@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+ruby '2.2.0'
+
+gem 'rake'
+gem 'cucumber', '~> 2.0.0.rc.4'
+gem 'watir-webdriver'
+gem 'page-object'
+gem 'headless'
+gem 'faker'
+gem 'rspec'
+gem 'require_all'
+gem 'data_magic'
