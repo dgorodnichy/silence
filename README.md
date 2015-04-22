@@ -9,7 +9,9 @@ Install gem:
     $ gem install 'silence'
 
 
-And then generate new project:
+## Usage
+
+Generate new project:
 
     $ silence new project_name
 
@@ -19,9 +21,7 @@ During installation generator create:
 * install all reauired libraries
 * setup ruby environment(create .ruby-gemset and .ruby-version)
 
-## Usage
-
-Run "cucumber" in project path
+Then run "cucumber" in project path
     
     cucumber
 
