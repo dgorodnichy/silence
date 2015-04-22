@@ -1,39 +1,32 @@
 # Silence
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/silence`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my new gem which I use to writing functional tests. I named it "silence" because I like silence :)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install gem:
 
-```ruby
-gem 'silence'
-```
+    $ gem install 'silence'
 
-And then execute:
 
-    $ bundle
+And then generate new project:
 
-Or install it yourself as:
+    $ silence new project_name
 
-    $ gem install silence
+During installation generator create:
+
+* generate project structure
+* install all reauired libraries
+* setup ruby environment(create .ruby-gemset and .ruby-version)
 
 ## Usage
 
-TODO: Write usage instructions here
+Run "cucumber" in project path
+    
+    cucumber
 
-## Development
+## Project structure:
+![alt text](https://pp.vk.me/c622822/v622822478/30db5/3aA1UIZ766M.jpg "Logo Title Text 1")
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+to be continued ...
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/silence/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
