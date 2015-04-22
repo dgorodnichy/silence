@@ -23,7 +23,7 @@ module Silence
       end
 
       def generate_file(path_to_file, content)
-        File.open(path_to_file, "w+") { |file| file.write(name) }
+        File.open(path_to_file, "w+") { |file| file.write(content) }
       end
 
       def copy_project_structure(project_name)
