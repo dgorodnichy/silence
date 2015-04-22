@@ -18,7 +18,7 @@ Generate new project:
 During installation generator create:
 
 * generate project structure
-* install all reauired libraries
+* install all required libraries
 * setup ruby environment(create .ruby-gemset and .ruby-version)
 
 Then run "cucumber" in project path
