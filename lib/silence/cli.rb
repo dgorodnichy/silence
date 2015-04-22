@@ -8,8 +8,10 @@ module Silence
     option :upcase
 
     def new(name)
+      Dir.mkdir(name) unless File.exists?(name)
       spec = Gem::Specification.find_by_name 'silence'       
-      FileUtils.cp_r "#{spec.gem_dir}/lib/.", Dir.pwd, :verbose => true
+      FileUtils.cp_r "#{spec.gem_dir}/lib/.", "#{Dir.pwd}/#{name}", :verbose => true
+      system("cd #{name}")
       color_output(system("rvm gemset list"), 34)
       system("bundle")
     end
