@@ -27,7 +27,7 @@ Then run "cucumber" in project path
 
 ## Running options:
 
-All available options we can see in cucumber.yml and all running options should be described there.
+All available options we can see in **cucumber.yml** and all running options should be described there.
 
 ## Project structure:
 
