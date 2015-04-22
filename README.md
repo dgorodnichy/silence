@@ -15,7 +15,7 @@ Generate new project:
 
     $ silence new project_name
 
-During installation generator create:
+During installation generator makes:
 
 * generate project structure
 * install all required libraries
