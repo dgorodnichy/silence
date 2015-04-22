@@ -9,7 +9,7 @@ module Silence
 
     def new(name)
       Dir.mkdir(name) unless File.exists?(name)
-      copy_project_structure
+      copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
       generate_file("#{name}/.ruby-version", "ruby-2.2.0")
       color_output(system("rvm gemset list"), 34)
