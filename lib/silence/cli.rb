@@ -23,7 +23,7 @@ module Silence
       end
 
       def generate_file(path_to_file, content)
-        File.new() { |file| file.puts(name) }
+        File.new(path_to_file) { |file| file.puts(name) }
       end
 
       def copy_project_structure(project_name)
