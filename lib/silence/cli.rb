@@ -11,7 +11,9 @@ module Silence
       Dir.mkdir(name) unless File.exists?(name)
       spec = Gem::Specification.find_by_name 'silence'       
       FileUtils.cp_r "#{spec.gem_dir}/lib/.", "#{Dir.pwd}/#{name}", :verbose => true
+      system("pwd")
       system("cd #{name}")
+      system("pwd")
       color_output(system("rvm gemset list"), 34)
       system("bundle")
     end
