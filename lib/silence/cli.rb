@@ -26,9 +26,9 @@ module Silence
         File.new() { |file| file.puts(name) }
       end
 
-      def copy_project_structure
+      def copy_project_structure(project_name)
         spec = Gem::Specification.find_by_name 'silence'       
-        FileUtils.cp_r "#{spec.gem_dir}/lib/.", "#{Dir.pwd}/#{name}", :verbose => true
+        FileUtils.cp_r "#{spec.gem_dir}/lib/.", "#{Dir.pwd}/#{project_name}", :verbose => true
       end
 
     end
