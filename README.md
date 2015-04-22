@@ -26,7 +26,25 @@ Then run "cucumber" in project path
     cucumber
 
 ## Project structure:
-![alt text](https://pp.vk.me/c622822/v622822478/30db5/3aA1UIZ766M.jpg "Logo Title Text 1")
+
+```
+├── config
+│   ├── browser_profiles
+│   └── data
+├── features
+│   ├── pages
+│   │   ├── widgets
+│   │   │   └── some_widgets.rb
+│   │   └── some_page.rb
+│   ├── step_definitions
+│   │   └── some_steps.feature
+│   ├── support
+│   └── some_feature.feature
+├── reports
+├── silence
+│   └── cli
+└── cucumber.yml
+```
 
 to be continued ...
 
