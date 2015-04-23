@@ -8,6 +8,7 @@ module Silence
     option :upcase
 
     def new(name)
+      check_system_packages(['Xvfb'])
       Dir.mkdir(name) unless File.exists?(name)
       copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
@@ -15,6 +16,12 @@ module Silence
     end
 
     no_commands do
+
+      def check_system_packages(*packages)
+        packages.each do |e| 
+          raise "#{package} should be installed!" if system("which #{package}") 
+        end
+      end
 
       def color_output(string, color)
         printf "\033[#{color}m#{string}\033[0m\n"
