@@ -12,7 +12,6 @@ module Silence
       copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
       generate_file("#{name}/.ruby-version", "ruby-2.2.2")
-      system("cd #{name} && bundle")
     end
 
     no_commands do
