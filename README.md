@@ -21,6 +21,11 @@ During installation generator makes:
 * install all required libraries
 * setup ruby environment(create .ruby-gemset and .ruby-version)
 
+
+    $ cd project_name
+
+    $ bundle
+
 Then run "cucumber" in project path
     
     cucumber
