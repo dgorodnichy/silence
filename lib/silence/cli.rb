@@ -8,7 +8,7 @@ module Silence
     option :upcase
 
     def new(name)
-      check_system_packages('Xvfb')
+      check_system_packages('Xvfb', 'firefox')
       Dir.mkdir(name) unless File.exists?(name)
       copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
@@ -29,7 +29,7 @@ module Silence
         end
       end
 
-      def color_output(string, color=33)
+      def color_output(string, color=29)
         printf "\033[#{color}m#{string}\033[0m\n"
       end
 
