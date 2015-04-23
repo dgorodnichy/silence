@@ -18,11 +18,15 @@ module Silence
     no_commands do
 
       def check_system_packages(*packages)
+        missing_packages = []
         packages.each do |package| 
-          unless system("which #{package}")
-            begin
-              raise
-            rescue Exception => e
+          missing_packages << package unless system("which #{package}")
+        end
+        if missing_packages.size > 0
+          begin
+            raise
+          rescue Exception => e
+            missing_packages.each do |package|  
               color_output("#{package} should be installed!", 31)
             end
           end
