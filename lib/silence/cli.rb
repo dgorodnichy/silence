@@ -8,7 +8,7 @@ module Silence
     option :upcase
 
     def new(name)
-      check_system_packages(['Xvfb'])
+      check_system_packages('Xvfb')
       Dir.mkdir(name) unless File.exists?(name)
       copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
@@ -18,8 +18,8 @@ module Silence
     no_commands do
 
       def check_system_packages(*packages)
-        packages.each do |e| 
-          raise "#{package} should be installed!" if system("which #{package}") 
+        packages.each do |package| 
+          raise "#{package} should be installed!" unless system("which #{package}") 
         end
       end
 
