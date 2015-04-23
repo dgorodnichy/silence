@@ -23,13 +23,13 @@ module Silence
             begin
               raise
             rescue Exception => e
-              color_output "#{package} should be installed!" 
+              color_output("#{package} should be installed!", 31)
             end
           end
         end
       end
 
-      def color_output(string, color)
+      def color_output(string, color=33)
         printf "\033[#{color}m#{string}\033[0m\n"
       end
 
