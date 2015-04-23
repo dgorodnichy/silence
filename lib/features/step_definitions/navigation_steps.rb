@@ -1,5 +1,5 @@
 Given /^I go to the "(.*)" page$/ do |page_name|
-  raise "Subdomain is not defined." if @subdomain.nil?
+  @subdomain = "default" if @subdomain.nil?
   steps %{ Given I go to the "#{page_name}" page on "#{@subdomain}" subdomain }
 end
 

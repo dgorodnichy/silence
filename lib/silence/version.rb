@@ -1,3 +1,3 @@
 module Silence
-  VERSION = "0.1.4.14"
+  VERSION = "0.1.4.15"
 end

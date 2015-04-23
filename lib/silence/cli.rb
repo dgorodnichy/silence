@@ -11,7 +11,7 @@ module Silence
       Dir.mkdir(name) unless File.exists?(name)
       copy_project_structure(name)
       generate_file("#{name}/.ruby-gemset", name)
-      generate_file("#{name}/.ruby-version", "ruby-2.2.0")
+      generate_file("#{name}/.ruby-version", "ruby-2.2.2")
       system("cd #{name} && bundle")
     end
 
