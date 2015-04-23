@@ -20,7 +20,7 @@ module Silence
       def check_system_packages(*packages)
         missing_packages = []
         packages.each do |package| 
-          missing_packages << package unless system("which #{package}")
+          missing_packages << package unless `which #{package}`.empty?
         end
         if missing_packages.size > 0
           begin
