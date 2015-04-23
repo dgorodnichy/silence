@@ -20,10 +20,11 @@ module Silence
       def check_system_packages(*packages)
         packages.each do |package| 
           unless system("which #{package}")
-          begin
-            raise
-          rescue Exception => e
-            color_output "#{package} should be installed!" 
+            begin
+              raise
+            rescue Exception => e
+              color_output "#{package} should be installed!" 
+            end
           end
         end
       end
