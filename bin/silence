@@ -9,4 +9,4 @@ require "silence"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-Silence::Setup.start( ARGV )
+Silence::NewGenerator.start( ARGV )
