@@ -12,24 +12,26 @@ module Silence
     end
 
     desc "new NAME", "This will setup new project"
+    method_option :example, :type => :boolean, :default => false, :aliases => "-e", :desc => "Add example feature"
     option :upcase
     def new(name)
       Dir.mkdir(name) unless File.exists?(name)
       copy_project_structure(name)
-      setup_ruby_environment(name)
+      setup_ruby_environment(name) unless File.exists?("#{name}/.ruby-version")
+      add_example_feature(name) if options[:example] == true 
     end
 
-    desc "example", "This will add example feature."
-    def example
-      copy_file "lib/example/example.feature", "features/example.feature"
-      copy_file "lib/example/example_page.rb", "features/pages/example_page.rb"
-      copy_file "lib/example/example_steps.rb", "features/step_definitions/example_steps.rb"
-      copy_file "lib/example/example_widget.rb", "features/pages/widgets/example_widget.rb"
-      copy_file "lib/example/urls.yml", "config/data/urls.yml"
-      copy_file "lib/example/user_registration_dataset.yml", "features/data/user_registration_dataset.yml"
-    end
+    #desc "example", "This will add example feature."
 
     no_commands do
+      def add_example_feature(name)
+        copy_file "example/example.feature", "#{name}/features/example.feature"
+        copy_file "example/example_page.rb", "#{name}/features/pages/example_page.rb"
+        copy_file "example/example_steps.rb", "#{name}/features/step_definitions/example_steps.rb"
+        copy_file "example/example_widget.rb", "#{name}/features/pages/widgets/example_widget.rb"
+        copy_file "example/urls.yml", "#{name}/config/data/urls.yml"
+        copy_file "example/user_registration_dataset.yml", "#{name}/features/data/user_registration_dataset.yml"
+      end
 
       def setup_ruby_environment(name)
         if yes? "Create .ruby-gemset and .ruby-version files? (y/n)"
@@ -50,7 +52,7 @@ module Silence
 
       def copy_project_structure(project_name)
         directory ".", "#{Dir.pwd}/#{project_name}", 
-        :exclude_pattern => /silence/, :exclude_pattern => /^bin$/, :exclude_pattern => /^example$/
+        :exclude_pattern => /example\//
       end
 
     end
